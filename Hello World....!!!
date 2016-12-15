@@ -1,0 +1,12 @@
+# include <stdio.h>
+# include <conio.h>
+# include <iostream.h>
+
+void main ( void )
+{
+   clrscr();
+    
+    cout<<"Hello World";
+    
+   getch();
+}
