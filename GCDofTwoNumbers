@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, gcd, i;
+
+    // Get the two numbers from the user
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    // Find the smaller of the two numbers
+    int smaller = a < b ? a : b;
+
+    // Iterate from the smaller number down to 1
+    for (i = smaller; i >= 1; i--) {
+        // If both numbers are divisible by the current iterator, it's the GCD
+        if (a % i == 0 && b % i == 0) {
+            gcd = i;
+            break;
+        }
+    }
+
+    // Print the GCD
+    printf("GCD of %d and %d is %d\n", a, b, gcd);
+
+    return 0;
+}
