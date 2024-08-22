@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2, num3;  // Declare three integer variables 'num1', 'num2', and 'num3' to store the input numbers
+    int largest;           // Declare an integer variable 'largest' to store the largest number
+
+    // Prompt the user to enter three numbers
+    printf("Enter the first number: ");
+    scanf("%d", &num1);  // Read the first number from the user and store it in 'num1'
+
+    printf("Enter the second number: ");
+    scanf("%d", &num2);  // Read the second number from the user and store it in 'num2'
+
+    printf("Enter the third number: ");
+    scanf("%d", &num3);  // Read the third number from the user and store it in 'num3'
+
+    // Assume the first number is the largest
+    largest = num1;
+
+    // Check if the second number is larger than the current largest
+    if (num2 > largest)
+        largest = num2;  // Update 'largest' to 'num2'
+
+    // Check if the third number is larger than the current largest
+    if (num3 > largest)
+        largest = num3;  // Update 'largest' to 'num3'
+
+    // Print the largest of the three numbers
+    printf("The largest number is: %d\n", largest);
+
+    return 0;  // Return 0 to indicate successful completion of the program
+}
