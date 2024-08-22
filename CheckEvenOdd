@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int num;  // Declare an integer variable 'num' to store the user's input
+
+    printf("Enter a number: ");  // Prompt the user to enter a number
+    scanf("%d", &num);  // Read the user's input and store it in 'num'
+
+    // Check if the number is divisible by 2
+    if (num % 2 == 0)
+        printf("%d is even.\\n", num);  // If true, print that the number is even
+    else
+        printf("%d is odd.\\n", num);  // If false, print that the number is odd
+
+    return 0;  // Return 0 to indicate successful completion of the program
+}
