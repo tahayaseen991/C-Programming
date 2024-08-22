@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int n, i, isPrime = 1;  // Declare 'n' for the input number, 'i' for iteration, and 'isPrime' to check primality
+
+    // Prompt the user to enter a positive integer
+    printf("Enter a positive integer: ");
+    scanf("%d", &n);  // Read the input number and store it in 'n'
+
+    // Check if the number is less than 2, as 0 and 1 are not prime numbers
+    if (n <= 1) {
+        isPrime = 0;  // Set 'isPrime' to 0 since numbers less than 2 are not prime
+    } else {
+        // Loop from 2 to the square root of 'n' to check divisibility
+        for (i = 2; i <= n / 2; ++i) {
+            if (n % i == 0) {  // If 'n' is divisible by 'i'
+                isPrime = 0;  // Set 'isPrime' to 0 indicating 'n' is not prime
+                break;  // Exit the loop since we found a divisor
+            }
+        }
+    }
+
+    // Print the result based on the value of 'isPrime'
+    if (isPrime) {
+        printf("%d is a prime number.\n", n);  // If 'isPrime' is 1, 'n' is prime
+    } else {
+        printf("%d is not a prime number.\n", n);  // If 'isPrime' is 0, 'n' is not prime
+    }
+
+    return 0;  // Return 0 to indicate successful completion of the program
+}
